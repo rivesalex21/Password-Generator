@@ -32,7 +32,7 @@ class Password:
             try:
                 self.minimum_length = int(input("Set the min Length: "))
                 self.maximum_lenth = int(input(f"Set the max Length, it must be greater than {self.minimum_length}: "))
-                while self.maximum_lenth <= self.minimum_length:
+                while self.maximum_lenth <= self.minimum_length or self.maximum_lenth < 3:
                     self.maximum_lenth = int(input(f"Invalid length, please enter a length greater than {self.minimum_length}: "))
             except:
                 print('Incorrect Values, try again')
